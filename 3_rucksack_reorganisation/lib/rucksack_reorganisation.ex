@@ -18,4 +18,20 @@ defmodule RucksackReorganisation do
     end)
     |> Enum.sum()
   end
+
+  def sum_of_badges(input) do
+    input
+    |> String.split("\n", trim: true)
+    |> Enum.map(&(&1 |> String.to_charlist() |> MapSet.new()))
+    |> Enum.chunk_every(3)
+    |> Enum.map(fn [a, b, c] ->
+      a
+      |> MapSet.intersection(b)
+      |> MapSet.intersection(c)
+      |> MapSet.to_list()
+      |> Enum.at(0)
+      |> priority()
+    end)
+    |> Enum.sum()
+  end
 end

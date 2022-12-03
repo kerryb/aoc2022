@@ -32,4 +32,17 @@ defmodule RucksackReorganisationTest do
              """) == 157
     end
   end
+
+  describe "RucksackReorganisation.sum_of_badges/1" do
+    test "returns the sum of priorities of common letters in each set of three lines" do
+      assert RucksackReorganisation.sum_of_badges("""
+             vJrwpWtwJgWrhcsFMMfFFhFp
+             jqHRNqRjqzjGDLGLrsFMfFZSrLrFZsSL
+             PmmdzqPrVvPwwTWBwg
+             wMqvLMZHhHMvwLHjbvcjnnSBnvTQFn
+             ttgJtRGJQctTZtZT
+             CrZsJsPPZsGzwwsLwLmpwMDw
+             """) == 70
+    end
+  end
 end
