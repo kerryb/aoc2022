@@ -1,8 +1,12 @@
 defmodule SupplyStacks do
-  def final_tops(input) do
+  def final_tops_one_by_one(input), do: final_tops(input, &move_one_by_one/2)
+
+  def final_tops_all_together(input), do: final_tops(input, &move_all_together/2)
+
+  defp final_tops(input, mover) do
     input
     |> extract_moves()
-    |> Enum.reduce(initial_stacks(input), &move/2)
+    |> Enum.reduce(initial_stacks(input), mover)
     |> Map.values()
     |> Enum.map(&hd/1)
     |> Enum.join()
@@ -36,11 +40,20 @@ defmodule SupplyStacks do
     end)
   end
 
-  defp move(move, stacks) do
+  defp move_one_by_one(move, stacks) do
     {items, stacks} =
       Map.get_and_update!(stacks, move.from, fn stack ->
         {removed, remaining} = Enum.split(stack, move.count)
         {Enum.reverse(removed), remaining}
+      end)
+
+    Map.update!(stacks, move.to, fn stack -> items ++ stack end)
+  end
+
+  defp move_all_together(move, stacks) do
+    {items, stacks} =
+      Map.get_and_update!(stacks, move.from, fn stack ->
+        Enum.split(stack, move.count)
       end)
 
     Map.update!(stacks, move.to, fn stack -> items ++ stack end)

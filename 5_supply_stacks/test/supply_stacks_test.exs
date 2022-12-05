@@ -1,9 +1,9 @@
 defmodule SupplyStacksTest do
   use ExUnit.Case
 
-  describe "SupplyStacks.final_tops/1" do
+  describe "SupplyStacks.final_tops_one_by_one/1" do
     test "returns the crates that end up at the top of each pile" do
-      assert SupplyStacks.final_tops("""
+      assert SupplyStacks.final_tops_one_by_one("""
                  [D]    
              [N] [C]    
              [Z] [M] [P]
@@ -14,6 +14,22 @@ defmodule SupplyStacksTest do
              move 2 from 2 to 1
              move 1 from 1 to 2
              """) == "CMZ"
+    end
+  end
+
+  describe "SupplyStacks.final_tops_all_together()/1" do
+    test "returns the crates that end up at the top of each pile" do
+      assert SupplyStacks.final_tops_all_together("""
+                 [D]    
+             [N] [C]    
+             [Z] [M] [P]
+              1   2   3 
+
+             move 1 from 2 to 1
+             move 3 from 1 to 3
+             move 2 from 2 to 1
+             move 1 from 1 to 2
+             """) == "MCD"
     end
   end
 
