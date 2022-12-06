@@ -1,10 +1,12 @@
 defmodule TuningTrouble do
-  def marker_position(input), do: marker_position(input, 4)
+  def packet_position(input), do: input |> String.codepoints() |> find_sequence(4, 4)
+  def message_position(input), do: input |> String.codepoints() |> find_sequence(14, 14)
 
-  defp marker_position(<<a>> <> <<b>> <> <<c>> <> <<d>> <> _tail, position)
-       when a != b and a != c and a != d and b != c and b != d and c != d do
-    position
+  defp find_sequence(letters, length, position) do
+    if letters |> Enum.take(length) |> Enum.uniq() |> length() == length do
+      position
+    else
+      letters |> Enum.drop(1) |> find_sequence(length, position + 1)
+    end
   end
-
-  defp marker_position(<<_>> <> tail, position), do: marker_position(tail, position + 1)
 end
