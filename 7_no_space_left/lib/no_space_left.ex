@@ -1,14 +1,26 @@
 defmodule NoSpaceLeft do
   def total_sizes(input) do
     input
-    |> String.split("\n", trim: true)
-    |> Enum.reduce(%{path: "", sizes: %{}}, &parse_line/2)
-    |> then(&Map.values(&1.sizes))
+    |> sizes()
+    |> Map.values()
     |> Enum.filter(&(&1 <= 100_000))
     |> Enum.sum()
   end
 
-  defp parse_line("$ cd /", _state), do: %{path: "", sizes: %{"/" => 0}}
+  def smallest_to_delete(input) do
+    sizes = sizes(input)
+    extra_space_needed = sizes["/"] - 40_000_000
+    sizes |> Map.values() |> Enum.filter(&(&1 >= extra_space_needed)) |> Enum.min()
+  end
+
+  defp sizes(input) do
+    input
+    |> String.split("\n", trim: true)
+    |> Enum.reduce(%{path: "", sizes: %{}}, &parse_line/2)
+    |> Map.get(:sizes)
+  end
+
+  defp parse_line("$ cd /", _state), do: %{path: "/", sizes: %{"/" => 0}}
   defp parse_line("$ ls", state), do: state
 
   defp parse_line("$ cd ..", state),
