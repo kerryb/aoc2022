@@ -1,0 +1,128 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+CalorieCounting	1_calorie_counting/lib/calorie_counting.ex	/^defmodule CalorieCounting do$/;"	m	line:1	language:Elixir
+CalorieCountingTest	1_calorie_counting/test/calorie_counting_test.exs	/^defmodule CalorieCountingTest do$/;"	m	line:1	language:Elixir
+CampCleanup	4_camp_cleanup/lib/camp_cleanup.ex	/^defmodule CampCleanup do$/;"	m	line:1	language:Elixir
+CampCleanupTest	4_camp_cleanup/test/camp_cleanup_test.exs	/^defmodule CampCleanupTest do$/;"	m	line:1	language:Elixir
+MixProject	1_calorie_counting/mix.exs	/^defmodule CalorieCounting.MixProject do$/;"	m	line:1	language:Elixir
+MixProject	2_rock_paper_scissors/mix.exs	/^defmodule RockPaperScissors.MixProject do$/;"	m	line:1	language:Elixir
+MixProject	3_rucksack_reorganisation/mix.exs	/^defmodule RucksackReorganisation.MixProject do$/;"	m	line:1	language:Elixir
+MixProject	4_camp_cleanup/mix.exs	/^defmodule CampCleanup.MixProject do$/;"	m	line:1	language:Elixir
+MixProject	5_supply_stacks/mix.exs	/^defmodule SupplyStacks.MixProject do$/;"	m	line:1	language:Elixir
+MixProject	6_tuning_trouble/mix.exs	/^defmodule TuningTrouble.MixProject do$/;"	m	line:1	language:Elixir
+MixProject	7_no_space_left/mix.exs	/^defmodule NoSpaceLeft.MixProject do$/;"	m	line:1	language:Elixir
+NoSpaceLeft	7_no_space_left/lib/no_space_left.ex	/^defmodule NoSpaceLeft do$/;"	m	line:1	language:Elixir
+NoSpaceLeftTest	7_no_space_left/test/no_space_left_test.exs	/^defmodule NoSpaceLeftTest do$/;"	m	line:1	language:Elixir
+RockPaperScissors	2_rock_paper_scissors/lib/rock_paper_scissors.ex	/^defmodule RockPaperScissors do$/;"	m	line:1	language:Elixir
+RockPaperScissorsTest	2_rock_paper_scissors/test/rock_paper_scissors_test.exs	/^defmodule RockPaperScissorsTest do$/;"	m	line:1	language:Elixir
+RucksackReorganisation	3_rucksack_reorganisation/lib/rucksack_reorganisation.ex	/^defmodule RucksackReorganisation do$/;"	m	line:1	language:Elixir
+RucksackReorganisationTest	3_rucksack_reorganisation/test/rucksack_reorganisation_test.exs	/^defmodule RucksackReorganisationTest do$/;"	m	line:1	language:Elixir
+SupplyStacks	5_supply_stacks/lib/supply_stacks.ex	/^defmodule SupplyStacks do$/;"	m	line:1	language:Elixir
+SupplyStacksTest	5_supply_stacks/test/supply_stacks_test.exs	/^defmodule SupplyStacksTest do$/;"	m	line:1	language:Elixir
+TuningTrouble	6_tuning_trouble/lib/tuning_trouble.ex	/^defmodule TuningTrouble do$/;"	m	line:1	language:Elixir
+TuningTroubleTest	6_tuning_trouble/test/tuning_trouble_test.exs	/^defmodule TuningTroubleTest do$/;"	m	line:1	language:Elixir
+add_size	7_no_space_left/lib/no_space_left.ex	/^  defp add_size(state, path, size) do$/;"	f	line:45	language:Elixir
+add_sizes	7_no_space_left/lib/no_space_left.ex	/^  defp add_sizes(state, "\/", size), do: add_size(state, "\/", size)$/;"	f	line:37	language:Elixir
+add_sizes	7_no_space_left/lib/no_space_left.ex	/^  defp add_sizes(state, path, size) do$/;"	f	line:39	language:Elixir
+append_path	7_no_space_left/lib/no_space_left.ex	/^  defp append_path("\/", name), do: "\/#{name}"$/;"	f	line:34	language:Elixir
+append_path	7_no_space_left/lib/no_space_left.ex	/^  defp append_path(path, name), do: "#{path}\/#{name}"$/;"	f	line:35	language:Elixir
+application	1_calorie_counting/mix.exs	/^  def application do$/;"	f	line:15	language:Elixir
+application	2_rock_paper_scissors/mix.exs	/^  def application do$/;"	f	line:15	language:Elixir
+application	3_rucksack_reorganisation/mix.exs	/^  def application do$/;"	f	line:15	language:Elixir
+application	4_camp_cleanup/mix.exs	/^  def application do$/;"	f	line:15	language:Elixir
+application	5_supply_stacks/mix.exs	/^  def application do$/;"	f	line:15	language:Elixir
+application	6_tuning_trouble/mix.exs	/^  def application do$/;"	f	line:15	language:Elixir
+application	7_no_space_left/mix.exs	/^  def application do$/;"	f	line:15	language:Elixir
+builds a map of positions to stacks	5_supply_stacks/test/supply_stacks_test.exs	/^    test "builds a map of positions to stacks, which are lists starting with the topmost item" do$/;"	t	line:37	language:Elixir
+calculates the score	2_rock_paper_scissors/test/rock_paper_scissors_test.exs	/^    test "calculates the score" do$/;"	t	line:15	language:Elixir
+calculates the score	2_rock_paper_scissors/test/rock_paper_scissors_test.exs	/^    test "calculates the score" do$/;"	t	line:5	language:Elixir
+count_fully_covered	4_camp_cleanup/lib/camp_cleanup.ex	/^  def count_fully_covered(input) do$/;"	f	line:2	language:Elixir
+count_overlapping	4_camp_cleanup/lib/camp_cleanup.ex	/^  def count_overlapping(input) do$/;"	f	line:6	language:Elixir
+counts the rows where one range fully covers the other	4_camp_cleanup/test/camp_cleanup_test.exs	/^    test "counts the rows where one range fully covers the other" do$/;"	t	line:5	language:Elixir
+counts the rows where one range overlaps the other	4_camp_cleanup/test/camp_cleanup_test.exs	/^    test "counts the rows where one range overlaps the other" do$/;"	t	line:18	language:Elixir
+deps	1_calorie_counting/mix.exs	/^  defp deps do$/;"	f	line:22	language:Elixir
+deps	2_rock_paper_scissors/mix.exs	/^  defp deps do$/;"	f	line:22	language:Elixir
+deps	3_rucksack_reorganisation/mix.exs	/^  defp deps do$/;"	f	line:22	language:Elixir
+deps	4_camp_cleanup/mix.exs	/^  defp deps do$/;"	f	line:22	language:Elixir
+deps	5_supply_stacks/mix.exs	/^  defp deps do$/;"	f	line:22	language:Elixir
+deps	6_tuning_trouble/mix.exs	/^  defp deps do$/;"	f	line:22	language:Elixir
+deps	7_no_space_left/mix.exs	/^  defp deps do$/;"	f	line:22	language:Elixir
+extract_items	5_supply_stacks/lib/supply_stacks.ex	/^  defp extract_items(line) do$/;"	f	line:26	language:Elixir
+extract_moves	5_supply_stacks/lib/supply_stacks.ex	/^  defp extract_moves(input) do$/;"	f	line:35	language:Elixir
+final_tops	5_supply_stacks/lib/supply_stacks.ex	/^  defp final_tops(input, mover) do$/;"	f	line:6	language:Elixir
+final_tops_all_together	5_supply_stacks/lib/supply_stacks.ex	/^  def final_tops_all_together(input), do: final_tops(input, &move_all_together\/2)$/;"	f	line:4	language:Elixir
+final_tops_one_by_one	5_supply_stacks/lib/supply_stacks.ex	/^  def final_tops_one_by_one(input), do: final_tops(input, &move_one_by_one\/2)$/;"	f	line:2	language:Elixir
+find_sequence	6_tuning_trouble/lib/tuning_trouble.ex	/^  defp find_sequence(letters, length, position) do$/;"	f	line:5	language:Elixir
+fully_covered?	4_camp_cleanup/lib/camp_cleanup.ex	/^  defp fully_covered?([a_1, b_1, a_2, b_2]) when a_1 >= a_2 and b_1 <= b_2, do: true$/;"	f	line:16	language:Elixir
+fully_covered?	4_camp_cleanup/lib/camp_cleanup.ex	/^  defp fully_covered?([a_1, b_1, a_2, b_2]) when a_2 >= a_1 and b_2 <= b_1, do: true$/;"	f	line:17	language:Elixir
+fully_covered?	4_camp_cleanup/lib/camp_cleanup.ex	/^  defp fully_covered?(_), do: false$/;"	f	line:18	language:Elixir
+highest_n_total	1_calorie_counting/lib/calorie_counting.ex	/^  defp highest_n_total(input, n) do$/;"	f	line:5	language:Elixir
+highest_three_total	1_calorie_counting/lib/calorie_counting.ex	/^  def highest_three_total(input), do: highest_n_total(input, 3)$/;"	f	line:3	language:Elixir
+highest_total	1_calorie_counting/lib/calorie_counting.ex	/^  def highest_total(input), do: highest_n_total(input, 1)$/;"	f	line:2	language:Elixir
+initial_stacks	5_supply_stacks/lib/supply_stacks.ex	/^  def initial_stacks(input) do$/;"	f	line:15	language:Elixir
+message_position	6_tuning_trouble/lib/tuning_trouble.ex	/^  def message_position(input), do: input |> String.codepoints() |> find_sequence(14, 14)$/;"	f	line:3	language:Elixir
+move_all_together	5_supply_stacks/lib/supply_stacks.ex	/^  defp move_all_together(move, stacks) do$/;"	f	line:53	language:Elixir
+move_one_by_one	5_supply_stacks/lib/supply_stacks.ex	/^  defp move_one_by_one(move, stacks) do$/;"	f	line:43	language:Elixir
+overlapping?	4_camp_cleanup/lib/camp_cleanup.ex	/^  defp overlapping?([_a_1, b_1, a_2, _b_2]) when b_1 < a_2, do: false$/;"	f	line:20	language:Elixir
+overlapping?	4_camp_cleanup/lib/camp_cleanup.ex	/^  defp overlapping?([a_1, _b_1, _a_2, b_2]) when b_2 < a_1, do: false$/;"	f	line:21	language:Elixir
+overlapping?	4_camp_cleanup/lib/camp_cleanup.ex	/^  defp overlapping?(_), do: true$/;"	f	line:22	language:Elixir
+packet_position	6_tuning_trouble/lib/tuning_trouble.ex	/^  def packet_position(input), do: input |> String.codepoints() |> find_sequence(4, 4)$/;"	f	line:2	language:Elixir
+parent_path	7_no_space_left/lib/no_space_left.ex	/^  defp parent_path(path) do$/;"	f	line:26	language:Elixir
+parse	4_camp_cleanup/lib/camp_cleanup.ex	/^  defp parse(input) do$/;"	f	line:10	language:Elixir
+parse_line	7_no_space_left/lib/no_space_left.ex	/^  defp parse_line("$ cd " <> dir, state), do: Map.update!(state, :path, &append_path(&1, dir))$/;"	f	line:17	language:Elixir
+parse_line	7_no_space_left/lib/no_space_left.ex	/^  defp parse_line("$ cd ..", state),$/;"	f	line:14	language:Elixir
+parse_line	7_no_space_left/lib/no_space_left.ex	/^  defp parse_line("$ cd \/", _state), do: %{path: "", sizes: %{"\/" => 0}}$/;"	f	line:11	language:Elixir
+parse_line	7_no_space_left/lib/no_space_left.ex	/^  defp parse_line("$ ls", state), do: state$/;"	f	line:12	language:Elixir
+parse_line	7_no_space_left/lib/no_space_left.ex	/^  defp parse_line("dir " <> _, state), do: state$/;"	f	line:19	language:Elixir
+parse_line	7_no_space_left/lib/no_space_left.ex	/^  defp parse_line(file, state) do$/;"	f	line:21	language:Elixir
+priority	3_rucksack_reorganisation/lib/rucksack_reorganisation.ex	/^  def priority(letter) when letter in ?A..?Z, do: letter - ?A + 27$/;"	f	line:3	language:Elixir
+priority	3_rucksack_reorganisation/lib/rucksack_reorganisation.ex	/^  def priority(letter) when letter in ?a..?z, do: letter - ?a + 1$/;"	f	line:2	language:Elixir
+project	1_calorie_counting/mix.exs	/^  def project do$/;"	f	line:4	language:Elixir
+project	2_rock_paper_scissors/mix.exs	/^  def project do$/;"	f	line:4	language:Elixir
+project	3_rucksack_reorganisation/mix.exs	/^  def project do$/;"	f	line:4	language:Elixir
+project	4_camp_cleanup/mix.exs	/^  def project do$/;"	f	line:4	language:Elixir
+project	5_supply_stacks/mix.exs	/^  def project do$/;"	f	line:4	language:Elixir
+project	6_tuning_trouble/mix.exs	/^  def project do$/;"	f	line:4	language:Elixir
+project	7_no_space_left/mix.exs	/^  def project do$/;"	f	line:4	language:Elixir
+returns the crates that end up at the top of each pile	5_supply_stacks/test/supply_stacks_test.exs	/^    test "returns the crates that end up at the top of each pile" do$/;"	t	line:21	language:Elixir
+returns the crates that end up at the top of each pile	5_supply_stacks/test/supply_stacks_test.exs	/^    test "returns the crates that end up at the top of each pile" do$/;"	t	line:5	language:Elixir
+returns the letter number	3_rucksack_reorganisation/test/rucksack_reorganisation_test.exs	/^    test "returns the letter number + 26 for A–Z" do$/;"	t	line:10	language:Elixir
+returns the letter number for a	3_rucksack_reorganisation/test/rucksack_reorganisation_test.exs	/^    test "returns the letter number for a–z" do$/;"	t	line:5	language:Elixir
+returns the number of characters before 14 consecutive different cahracters are received	6_tuning_trouble/test/tuning_trouble_test.exs	/^    test "returns the number of characters before 14 consecutive different cahracters are received" do$/;"	t	line:13	language:Elixir
+returns the number of characters before four consecutive different cahracters are received	6_tuning_trouble/test/tuning_trouble_test.exs	/^    test "returns the number of characters before four consecutive different cahracters are received" do$/;"	t	line:5	language:Elixir
+returns the sum of priorities of common letters	3_rucksack_reorganisation/test/rucksack_reorganisation_test.exs	/^    test "returns the sum of priorities of common letters" do$/;"	t	line:24	language:Elixir
+returns the sum of priorities of common letters in each set of three lines	3_rucksack_reorganisation/test/rucksack_reorganisation_test.exs	/^    test "returns the sum of priorities of common letters in each set of three lines" do$/;"	t	line:37	language:Elixir
+returns the sum of total sizes up to 100	7_no_space_left/test/no_space_left_test.exs	/^    test "returns the sum of total sizes up to 100,000" do$/;"	t	line:5	language:Elixir
+returns the total for the elf with the most calories	1_calorie_counting/test/calorie_counting_test.exs	/^    test "returns the total for the elf with the most calories" do$/;"	t	line:5	language:Elixir
+returns the total for the three elves with the most calories	1_calorie_counting/test/calorie_counting_test.exs	/^    test "returns the total for the three elves with the most calories" do$/;"	t	line:28	language:Elixir
+returns two sets of chars containing the first and second half of the letters	3_rucksack_reorganisation/test/rucksack_reorganisation_test.exs	/^    test "returns two sets of chars containing the first and second half of the letters" do$/;"	t	line:17	language:Elixir
+score	2_rock_paper_scissors/lib/rock_paper_scissors.ex	/^  def score(input) do$/;"	f	line:2	language:Elixir
+score_properly	2_rock_paper_scissors/lib/rock_paper_scissors.ex	/^  def score_properly(input) do$/;"	f	line:16	language:Elixir
+score_round	2_rock_paper_scissors/lib/rock_paper_scissors.ex	/^  defp score_round("A X"), do: 4$/;"	f	line:6	language:Elixir
+score_round	2_rock_paper_scissors/lib/rock_paper_scissors.ex	/^  defp score_round("A Y"), do: 8$/;"	f	line:7	language:Elixir
+score_round	2_rock_paper_scissors/lib/rock_paper_scissors.ex	/^  defp score_round("A Z"), do: 3$/;"	f	line:8	language:Elixir
+score_round	2_rock_paper_scissors/lib/rock_paper_scissors.ex	/^  defp score_round("B X"), do: 1$/;"	f	line:9	language:Elixir
+score_round	2_rock_paper_scissors/lib/rock_paper_scissors.ex	/^  defp score_round("B Y"), do: 5$/;"	f	line:10	language:Elixir
+score_round	2_rock_paper_scissors/lib/rock_paper_scissors.ex	/^  defp score_round("B Z"), do: 9$/;"	f	line:11	language:Elixir
+score_round	2_rock_paper_scissors/lib/rock_paper_scissors.ex	/^  defp score_round("C X"), do: 7$/;"	f	line:12	language:Elixir
+score_round	2_rock_paper_scissors/lib/rock_paper_scissors.ex	/^  defp score_round("C Y"), do: 2$/;"	f	line:13	language:Elixir
+score_round	2_rock_paper_scissors/lib/rock_paper_scissors.ex	/^  defp score_round("C Z"), do: 6$/;"	f	line:14	language:Elixir
+score_round_properly	2_rock_paper_scissors/lib/rock_paper_scissors.ex	/^  defp score_round_properly("A X"), do: 3$/;"	f	line:20	language:Elixir
+score_round_properly	2_rock_paper_scissors/lib/rock_paper_scissors.ex	/^  defp score_round_properly("A Y"), do: 4$/;"	f	line:21	language:Elixir
+score_round_properly	2_rock_paper_scissors/lib/rock_paper_scissors.ex	/^  defp score_round_properly("A Z"), do: 8$/;"	f	line:22	language:Elixir
+score_round_properly	2_rock_paper_scissors/lib/rock_paper_scissors.ex	/^  defp score_round_properly("B X"), do: 1$/;"	f	line:23	language:Elixir
+score_round_properly	2_rock_paper_scissors/lib/rock_paper_scissors.ex	/^  defp score_round_properly("B Y"), do: 5$/;"	f	line:24	language:Elixir
+score_round_properly	2_rock_paper_scissors/lib/rock_paper_scissors.ex	/^  defp score_round_properly("B Z"), do: 9$/;"	f	line:25	language:Elixir
+score_round_properly	2_rock_paper_scissors/lib/rock_paper_scissors.ex	/^  defp score_round_properly("C X"), do: 2$/;"	f	line:26	language:Elixir
+score_round_properly	2_rock_paper_scissors/lib/rock_paper_scissors.ex	/^  defp score_round_properly("C Y"), do: 6$/;"	f	line:27	language:Elixir
+score_round_properly	2_rock_paper_scissors/lib/rock_paper_scissors.ex	/^  defp score_round_properly("C Z"), do: 7$/;"	f	line:28	language:Elixir
+split_chars	3_rucksack_reorganisation/lib/rucksack_reorganisation.ex	/^  def split_chars(string) do$/;"	f	line:5	language:Elixir
+sum	1_calorie_counting/lib/calorie_counting.ex	/^  defp sum(lines) do$/;"	f	line:14	language:Elixir
+sum_of_badges	3_rucksack_reorganisation/lib/rucksack_reorganisation.ex	/^  def sum_of_badges(input) do$/;"	f	line:22	language:Elixir
+sum_of_priorities	3_rucksack_reorganisation/lib/rucksack_reorganisation.ex	/^  def sum_of_priorities(input) do$/;"	f	line:12	language:Elixir
+total_sizes	7_no_space_left/lib/no_space_left.ex	/^  def total_sizes(input) do$/;"	f	line:2	language:Elixir
+transpose	5_supply_stacks/lib/supply_stacks.ex	/^  defp transpose(rows) do$/;"	f	line:63	language:Elixir
