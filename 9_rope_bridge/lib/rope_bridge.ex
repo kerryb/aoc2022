@@ -1,9 +1,9 @@
 defmodule RopeBridge do
-  def count_visited(input, length \\ 1, debug? \\ false) do
+  def count_visited(input, length \\ 1) do
     input
     |> String.split("\n", trim: true)
     |> Enum.map(&parse_line/1)
-    |> Enum.reduce(init_rope(length), &move(&1, &2, debug?))
+    |> Enum.reduce(init_rope(length), &move/2)
     |> Map.get(:visited)
     |> MapSet.size()
   end
@@ -14,12 +14,11 @@ defmodule RopeBridge do
 
   defp parse_line(<<dir::bytes-size(1)>> <> " " <> dist), do: {dir, String.to_integer(dist)}
 
-  defp move({dir, dist}, state, debug?) do
-    if debug?, do: IO.puts("== #{dir} #{dist} ==\n")
-    Enum.reduce(1..dist, state, fn _, state -> step(dir, state, debug?) end)
+  defp move({dir, dist}, state) do
+    Enum.reduce(1..dist, state, fn _, state -> step(dir, state) end)
   end
 
-  defp step(dir, state, debug?) do
+  defp step(dir, state) do
     head = move_head(state.head, dir)
     tails = state.tails |> Enum.reduce({head, []}, &step_tail/2) |> elem(1) |> Enum.reverse()
 
@@ -27,7 +26,6 @@ defmodule RopeBridge do
     |> Map.put(:head, head)
     |> Map.put(:tails, tails)
     |> Map.update!(:visited, &MapSet.put(&1, List.last(tails)))
-    |> then(if debug?, do: &debug/1, else: fn s -> s end)
   end
 
   defp step_tail(tail, {head, tails}) do
@@ -49,27 +47,4 @@ defmodule RopeBridge do
   def move_tail({tx, _ty}, {hx, hy}) when hx - tx == 2, do: {tx + 1, hy}
   def move_tail({tx, _ty}, {hx, hy}) when hx - tx == -2, do: {tx - 1, hy}
   def move_tail(tail, _head), do: tail
-
-  defp debug(state) do
-    coords = [state.head | state.tails] ++ MapSet.to_list(state.visited)
-    {min_x, max_x} = coords |> Enum.map(&elem(&1, 0)) |> Enum.min_max()
-    {min_y, max_y} = coords |> Enum.map(&elem(&1, 1)) |> Enum.min_max()
-
-    for y <- max_y..min_y do
-      for x <- min_x..max_x do
-        cond do
-          state.head == {x, y} -> IO.write("H")
-          index = Enum.find_index(state.tails, &(&1 == {x, y})) -> IO.write(index + 1)
-          {x, y} in state.visited -> IO.write("O")
-          true -> IO.write(".")
-        end
-      end
-
-      IO.puts("")
-    end
-
-    IO.puts("")
-
-    state
-  end
 end
