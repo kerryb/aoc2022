@@ -7,6 +7,19 @@ defmodule CathodeRayTubeTest do
     end
   end
 
+  describe "CathodeRayTube.draw/1" do
+    test "produces the crt output" do
+      assert CathodeRayTube.draw(input()) == """
+             ##..##..##..##..##..##..##..##..##..##..
+             ###...###...###...###...###...###...###.
+             ####....####....####....####....####....
+             #####.....#####.....#####.....#####.....
+             ######......######......######......####
+             #######.......#######.......#######.....
+             """
+    end
+  end
+
   defp input do
     """
     addx 15
