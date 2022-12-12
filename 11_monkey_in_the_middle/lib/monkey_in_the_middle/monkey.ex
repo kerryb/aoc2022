@@ -2,7 +2,10 @@ defmodule MonkeyInTheMiddle.Monkey do
   defstruct [:id, :items, :operation, :divisor, :if_true, :if_false]
 
   def parse(input) do
-    input |> String.split("\n", trim: true) |> Enum.reduce([], &parse_line/2) |> Enum.reverse()
+    input
+    |> String.split("\n", trim: true)
+    |> Enum.reduce([], &parse_line/2)
+    |> Enum.into(%{}, &{&1.id, &1})
   end
 
   defp parse_line("Monkey " <> arg, monkeys) do
