@@ -40,11 +40,11 @@ defmodule MonkeyInTheMiddle.Monkey do
   defp build_operation("new = old * old"), do: fn x -> x * x end
   defp build_operation("new = old * " <> arg), do: fn x -> x * String.to_integer(arg) end
 
-  def throw(%{items: []}), do: :no_items
+  def throw(%{items: []}, _), do: :no_items
 
-  def throw(monkey) do
+  def throw(monkey, worry_reducer) do
     [item | items] = monkey.items
-    worry = item |> then(monkey.operation) |> div(3)
+    worry = item |> then(monkey.operation) |> then(worry_reducer)
     target = if rem(worry, monkey.divisor) == 0, do: monkey.if_true, else: monkey.if_false
     {%{monkey | items: items, inspect_count: monkey.inspect_count + 1}, worry, target}
   end

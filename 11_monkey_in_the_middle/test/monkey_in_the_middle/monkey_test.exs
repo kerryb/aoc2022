@@ -96,11 +96,12 @@ defmodule MonkeyInTheMiddle.MonkeyTest do
         inspect_count: 0
       }
 
-      assert Monkey.throw(monkey) == {%{monkey | items: [98], inspect_count: 1}, 500, 3}
+      assert Monkey.throw(monkey, &div(&1, 3)) ==
+               {%{monkey | items: [98], inspect_count: 1}, 500, 3}
     end
 
     test "returns :no_items when everything’s been thrown" do
-      assert Monkey.throw(%Monkey{items: []}) == :no_items
+      assert Monkey.throw(%Monkey{items: []}, & &1) == :no_items
     end
   end
 end
